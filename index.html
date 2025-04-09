@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iron Horse Ministry</title>
+  <style>
+    body { font-family: Georgia, serif; background: #fefefe; margin: 0; padding: 0; }
+    header { background: #222; color: #fff; padding: 1em; text-align: center; }
+    nav { text-align: center; background: #444; padding: 0.5em; }
+    nav a { color: #fff; margin: 0 1em; text-decoration: none; }
+    main { padding: 2em; }
+    section { margin-bottom: 2em; }
+    footer { text-align: center; background: #222; color: #fff; padding: 1em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Iron Horse Ministry</h1>
+    <p>"A new ride on an ancient path"</p>
+  </header>
+
+  <nav>
+    <a href="#mission">Mission</a>
+    <a href="#donate">Donate</a>
+    <a href="#scripture">Daily Scripture</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p>Iron Horse Ministry is a faith-based ministry committed to living out and teaching biblical principles of stewardship, community, and righteousness. We serve families, rural communities, and those who labor in the field, both literally and spiritually. Our focus includes land restoration, faith-based education, and practical service.</p>
+    </section>
+
+    <section id="faith">
+      <h2>Statement of Faith</h2>
+      <p>We believe in one Creator, the God of Abraham, Isaac, and Jacob. We follow the teachings of the Messiah, walk in His commandments, and strive to be good stewards of all that He provides. Our faith is expressed through action—teaching, serving, and restoring.</p>
+    </section>
+
+    <section id="donate">
+      <h2>Support the Ministry</h2>
+      <p>We welcome donations of time, materials, livestock, and funds. Your support helps us feed families, teach the Word, and grow the ministry's impact. Please contact us directly to discuss donations, or use the information below to send support.</p>
+      <ul>
+        <li>Email: <a href="mailto:info@ironhorseministry.org">info@ironhorseministry.org</a></li>
+        <li>Checks payable to: Iron Horse Ministry</li>
+        <li>Contact us for bank transfer or in-kind donation arrangements</li>
+      </ul>
+    </section>
+
+    <section id="scripture">
+      <h2>Daily Scripture</h2>
+      <div id="daily-scripture"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:info@ironhorseministry.org">info@ironhorseministry.org</a></p>
+      <p>Mailing Address: 27448 S Hwy 213, Mulino, OR 97042</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Iron Horse Ministry. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const scriptures = {
+      Sunday: { verse: "Isaiah 40:31", text: "But they that wait upon the LORD shall renew their strength..." },
+      Monday: { verse: "Psalm 20:7", text: "Some trust in chariots, and some in horses..." },
+      Tuesday: { verse: "2 Timothy 4:7-8", text: "I have fought a good fight... and not to me only, but unto all them also that love his appearing." },
+      Wednesday: { verse: "Proverbs 21:31", text: "The horse is prepared against the day of battle..." },
+      Thursday: { verse: "Revelation 19:11", text: "And I saw heaven opened, and behold a white horse..." },
+      Friday: { verse: "Psalm 91:11", text: "For he shall give his angels charge over thee..." },
+      Saturday: { verse: "Deuteronomy 31:6", text: "Be strong and of a good courage..." },
+    };
+    const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
+    const scripture = scriptures[today];
+    document.addEventListener("DOMContentLoaded", function() {
+      const container = document.getElementById("daily-scripture");
+      if (container && scripture) {
+        container.innerHTML = `<strong>${scripture.verse}</strong><br>${scripture.text}`;
+      }
+    });
+  </script>
+</body>
+</html>
